@@ -8,6 +8,8 @@ class HelloController extends Controller
 {
     public function hello(Request $request)
     {
-        return response()->json('Hello, world!');
+        return response()->json([
+            'mensagem' => 'Hello, world! Laravel OK'
+        ]);
     }
 }
