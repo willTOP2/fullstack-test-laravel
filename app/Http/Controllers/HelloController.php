@@ -11,5 +11,15 @@ class HelloController extends Controller
         return response()->json([
             'mensagem' => 'Hello, world! Laravel OK'
         ]);
-    }
+    } 
+    
+    public function horas(Request $request) { 
+    date_default_timezone_set('America/Sao_Paulo');
+    $DateHours = now()->format('d/m/Y  H:i:s');
+    
+    return response()->json([
+      
+        'DateHours' => $DateHours
+    ]);
+}
 }

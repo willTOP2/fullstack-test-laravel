@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 
 class InputController extends Controller
 {
-    public function Text(Request $request, $texto)
+    public function Text(Request $request)
     {
+    $msg = $request->input('msg');
         return response()->json([
-          "Texto do botao: $texto"
+          'msg'=> $msg
         ]);
     }
 }
